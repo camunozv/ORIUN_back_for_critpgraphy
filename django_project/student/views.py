@@ -50,7 +50,7 @@ class EligibilityView(APIView):
         student = request.user.student
 
         save_traceability(
-            request, 'EligibilityView', f'El estudiante quiere postularse a la convocatoria {request.GET.get('call')}'
+            request, 'EligibilityView', f"El estudiante quiere postularse a la convocatoria {request.GET.get('call')}"
         )
 
         # Being matriculated or en 'reserva de cupo'

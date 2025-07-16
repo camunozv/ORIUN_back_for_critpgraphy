@@ -18,7 +18,7 @@ import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
-CREDENTIALS = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+CREDENTIALS = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'credentials.json'))
 STORAGE_CLIENT = storage.Client.from_service_account_json(CREDENTIALS)
 
 
