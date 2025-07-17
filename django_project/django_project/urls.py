@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from person.views import GoogleAuthAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,5 +13,5 @@ urlpatterns = [
     path('application/', include(('application.urls','application'), namespace='application')),
     path('api-token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api-token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('auth/', include('social_django.urls', namespace='social')),
+    path('auth/google/', GoogleAuthAPIView.as_view(), name='google_auth'),
 ]
