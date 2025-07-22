@@ -9,6 +9,10 @@ from rest_framework.request import Request
 from .models import Traceability
 from .serializers import TraceabilitySerializer
 
+# python3 -m venv .venv --> to create new virtual environments
+# rm -r .venv --> to delete the created virtual environment
+# pip3 install numpy --> to install python libraries
+
 from employee.permissions import IsEmployee
 
 from data import helpers

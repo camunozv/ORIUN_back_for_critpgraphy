@@ -39,7 +39,7 @@ def sent_email_verif_code(to: str, id):
     dotenv_path = find_dotenv()
     load_dotenv(dotenv_path)
 
-    MAIL = "jtarazonaj@unal.edu.co"
+    MAIL = "quejasomnichannel@gmail.com"
     MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
 
     caracteres = string.ascii_letters + string.digits
